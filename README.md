@@ -1,4 +1,4 @@
-# musicapp
+# music application majorly based on html, css, vue, and typescript
 
 ## Project setup
 ```
