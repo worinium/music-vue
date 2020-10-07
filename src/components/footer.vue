@@ -3,7 +3,7 @@
 <footer class="footer-distributed">
     <div class="footer-left">
         <img src="http://placehold.it/150x50?text=Logo" />
-        <h4>About <span>PhotoShoot GIS App</span></h4>
+        <h4>About <span>Abadi Music</span></h4>
 
         <p class="footer-links">
             <a href="#">Home</a>
