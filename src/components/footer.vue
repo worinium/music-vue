@@ -1,148 +1,254 @@
 <template>
-    <div class="container">
-        <font-awesome-icon @click="toggleNav" icon="bars" class="bar"/>
-        <div class="no"></div>
-        <div class="search">
-            <input @keyup="searchAction" v-model="search" class="form-input" placeholder="Search"/>
+<!-- Footer -->
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <img src="http://placehold.it/150x50?text=Logo" />
+        <h4>About <span>PhotoShoot GIS App</span></h4>
+
+        <p class="footer-links">
+            <a href="#">Home</a>
+            |
+            <a href="#">Blog</a>
+            |
+            <a href="#">About</a>
+            |
+            <a href="#">Contact</a>
+        </p>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p>
+                <span>Port Harcourt, Rivers State</span>
+                Nigeria
+            </p>
         </div>
-        <div class="image" style="display:flex">
-            <img width="30" height="30" src="../assets/pic.jpg" class="image-fluid profile-pic image-round"/>
-            <label class="switch">
-                <input style="cursor:pointer" @change="changeTheme" v-model="theme" type="checkbox" />    
-                <div></div>
-            </label>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+2348166442613</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p>
+                <a href="mailto:alapherwori8g5@gmail.com">alapherwori8g5@gmail.com</a>
+            </p>
         </div>
     </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>About the company</span>
+            We offer training and skill building courses across Technology, Design,
+            Management, Science and Humanities.
+        </p>
+        <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+    </div>
+    <div class="footer-center">
+        <marquee attribute_name="attribute_value">
+            <p id="copyright" class=" footer-company-name">
+                &copy; {{ new Date().getFullYear() }} AbadiGIS Limited.
+            </p>
+        </marquee>
+    </div>
+</footer>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-import Component from 'vue-class-component'
-
-@Component
-export default class Header extends Vue {
-    private theme = false
-    search = ''
-
-    toggleNav(){
-        this.$store.commit('setSideNav')
-    }
-    changeTheme() {
-        if (this.theme === false) {
-            document.documentElement.setAttribute('data-theme', 'dark')
-        } else {
-            document.documentElement.setAttribute('data-theme', 'light')
-        }
-        window.localStorage.setItem('theme', this.theme?'true':'false')
-    }
-
-    searchAction () {
-        const path = '/search/'+this.search
-        if (this.$route.path !== path) {
-            this.$router.push(path)
-        }
-    }
-
-    mounted() {
-        if (window.localStorage.getItem('theme') === 'false') {
-            document.documentElement.setAttribute('data-theme', 'dark')
-            this.theme = false
-        } else {
-            document.documentElement.setAttribute('data-theme', 'light')
-            this.theme = true
-        }
-    }
-}
+<script>
+export default {};
 </script>
 
-<style lang="scss" scoped>
-    .container {
-        display: flex;
-        padding: 0 20px;
-        // width: 80%;
-        margin: 0 auto;
-        justify-content: center;
-    }
-    .bar {
-        margin-top: 10px;
-        margin-right: 10px;
-        font-size: 20px;
-        color: var(--main);
-        display: none;
-    }
-    .search {
-        flex: 1 1 0px;
-    }
-    .no {
-        width: 270px;
+<style scoped>
+/* The footer is fixed to the bottom of the page */
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+@media (max-height: 800px) {
+    footer {
+        position: static;
     }
 
-    .form-input {
-        margin-top: 3px;
-        width: 300px;
-        border: 0px;
-        &:focus {
-            outline: none;
-        }
+    header {
+        padding-top: 40px;
+    }
+}
+
+.footer-distributed {
+    background-color: #2a2f29;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 20px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+.footer-distributed h4 {
+    color: #ffffff;
+    font: normal 36px "Cookie", cursive;
+    margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img {
+    width: 30%;
+}
+
+.footer-distributed h3 span {
+    color: #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+#copyright {
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #e0ac1c;
+    text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+@media (max-width: 880px) {
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
     }
 
-    .profile-pic {
-        margin-top: 5px;
-        border: 1px solid rgb(167, 167, 167);
+    .footer-distributed .footer-center i {
+        margin-left: 0;
     }
-
-    @media (max-width: 600px) {
-        .form-input {
-            max-width: 220px
-        }
-    }
-
-    @media (max-width: 800px) {
-        .profile-pic {
-            display:none
-        }
-        .search {
-            width: 200px;
-        }
-        .no {
-            display: none;
-        }
-        .bar {
-            display: block;
-        }
-    }
-
-    .switch input {
-        position: absolute;
-        opacity: 0;
-    }
-
-    .switch {
-        display: inline-block;
-        font-size: 15px; 
-        height: 1em;
-        width: 2em;
-        background: var(--theme-switch);
-        border-radius: 1em;
-        margin-left: 20px;
-        margin-top: 14px;
-        margin-right: 30px;
-    }
-
-    .switch div {
-        height: 1em;
-        width: 1em;
-        border-radius: 1em;
-        background: #FFF;
-        box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
-        -webkit-transition: all 300ms;
-        -moz-transition: all 300ms;
-        transition: all 300ms;
-    }
-
-    .switch input:checked + div {
-    -webkit-transform: translate3d(100%, 0, 0);
-        -moz-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-    }
+}
 </style>
