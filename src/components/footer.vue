@@ -43,11 +43,25 @@
             Management, Science and Humanities.
         </p>
         <div class="footer-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#">
+                <font-awesome-icon icon="user-secret" />
+            </a>
+            <a href="#">
+                <font-awesome-icon icon="user-secret" />
+            </a>
+            <a href="#">
+                <font-awesome-icon icon="user-secret" />
+            </a>
+            <a href="#">
+                <font-awesome-icon icon="user-secret" />
+            </a>
+            <a href="#">
+                <font-awesome-icon icon="user-secret" />
+            </a>
+            <a href="#">
+                <font-awesome-icon icon="user-secret" />
+            </a>
+
         </div>
     </div>
     <div class="footer-center">
@@ -83,7 +97,6 @@ footer {
 }
 
 .footer-distributed {
-    background-color: #2a2f29;
     box-sizing: border-box;
     width: 100%;
     text-align: center;
@@ -106,7 +119,7 @@ footer {
 }
 
 .footer-distributed h4 {
-    color: #ffffff;
+    color: var(--text-dark);
     font: normal 36px "Cookie", cursive;
     margin: 0;
 }
@@ -124,19 +137,20 @@ footer {
 /* Footer links */
 
 .footer-distributed .footer-links {
-    color: #ffffff;
+
     margin: 20px 0 12px;
+
 }
 
 .footer-distributed .footer-links a {
     display: inline-block;
     line-height: 1.8;
     text-decoration: none;
-    color: inherit;
+    color: var(--text-dark);
 }
 
 .footer-distributed .footer-company-name {
-    color: #8f9296;
+    color: var(--text-dark);
     font-size: 14px;
     font-weight: normal;
     margin: 0;
@@ -149,8 +163,7 @@ footer {
 }
 
 .footer-distributed .footer-center i {
-    background-color: #33383b;
-    color: #ffffff;
+    color: var(--text-dark);
     font-size: 25px;
     width: 38px;
     height: 38px;
@@ -168,13 +181,13 @@ footer {
 
 .footer-distributed .footer-center p {
     display: inline-block;
-    color: #ffffff;
+    color: var(--text-dark);
     vertical-align: middle;
     margin: 0;
 }
 
 #copyright {
-    color: #ffffff;
+    color: var(--text-dark);
     font-size: 26px;
 }
 
@@ -206,7 +219,7 @@ footer {
 
 .footer-distributed .footer-company-about span {
     display: block;
-    color: #ffffff;
+    color: var(--text-dark);
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -221,11 +234,10 @@ footer {
     width: 35px;
     height: 35px;
     cursor: pointer;
-    background-color: #33383b;
     border-radius: 2px;
 
     font-size: 20px;
-    color: #ffffff;
+    color: var(--text-dark);
     text-align: center;
     line-height: 35px;
 

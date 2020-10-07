@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { library } from "@fortawesome/fontawesome-svg-core";
 import { faUserSecret, faDownload, faClock, faChevronDown, faBackward, faForward, faPlayCircle, faRedo, faRandom, faVolumeMute, faInfoCircle, faHome, faUser, faCompactDisc, faMicrophoneAlt, faBroadcastTower, faMusic, faHeadphonesAlt, faBars, faPauseCircle, faVolumeUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import './style.scss'

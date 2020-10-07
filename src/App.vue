@@ -19,7 +19,7 @@
             <component :is="'headerNav'" />
         </div>
         <div class="content" @click="$store.commit('setSideNavFalse')" style="margin-top: 60px">
-            <router-view />
+            <router-view style="padding: 2%;" />
             <div class="footer">
                 <component :is="'footerSection'" />
             </div>
@@ -124,7 +124,7 @@ export default class App extends Vue {
 }
 
 .content {
-    padding: 4%;
+
     padding-top: 1%;
     box-sizing: border-box;
     width: 100%;
