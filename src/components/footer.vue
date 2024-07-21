@@ -1,78 +1,58 @@
 <template>
-<!-- Footer -->
-<footer class="footer-distributed">
-    <div class="footer-left">
-        <img src="http://placehold.it/150x50?text=Logo" />
-        <h4>About <span>Abadi Music</span></h4>
-
+    <!-- Footer -->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <img src="http://placehold.it/150x50?text=Logo" alt="Logo" />
+        <h4> Music</h4>
         <p class="footer-links">
-            <a href="#">Home</a>
-            |
-            <a href="#">Blog</a>
-            |
-            <a href="#">About</a>
-            |
-            <a href="#">Contact</a>
+          <a href="#">Home</a> |
+          <a href="https://alahearty.github.io/portfolio/">Developer</a> |
+          <a href="#">About</a> |
+          <a href="#">Contact</a>
         </p>
-    </div>
-
-    <div class="footer-center">
+      </div>
+  
+      <div class="footer-center">
         <div>
-            <i class="fa fa-map-marker"></i>
-            <p>
-                <span>Port Harcourt, Rivers State</span>
-                Nigeria
-            </p>
+          <i class="fa fa-map-marker"></i>
+          <p>
+            <span>Port Harcourt, Rivers State</span>
+            Nigeria
+          </p>
         </div>
-
+  
         <div>
-            <i class="fa fa-phone"></i>
-            <p>+2348166442613</p>
+          <i class="fa fa-phone"></i>
+          <p>+2348166442613</p>
         </div>
         <div>
-            <i class="fa fa-envelope"></i>
-            <p>
-                <a href="mailto:alapherwori8g5@gmail.com">alapherwori8g5@gmail.com</a>
-            </p>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a href="mailto:alapherwori8g5@gmail.com">alapherwori8g5@gmail.com</a>
+          </p>
         </div>
-    </div>
-    <div class="footer-right">
+      </div>
+  
+      <div class="footer-right">
         <p class="footer-company-about">
-            <span>About the company</span>
-            We offer training and skill building courses across Technology, Design,
-            Management, Science and Humanities.
+          <span>About the company</span>
+          We offer training and skill-building courses across Technology, Design, Management, Science, and Humanities.
         </p>
         <div class="footer-icons">
-            <a href="#">
-                <font-awesome-icon icon="user-secret" />
-            </a>
-            <a href="#">
-                <font-awesome-icon icon="user-secret" />
-            </a>
-            <a href="#">
-                <font-awesome-icon icon="user-secret" />
-            </a>
-            <a href="#">
-                <font-awesome-icon icon="user-secret" />
-            </a>
-            <a href="#">
-                <font-awesome-icon icon="user-secret" />
-            </a>
-            <a href="#">
-                <font-awesome-icon icon="user-secret" />
-            </a>
-
+          <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
         </div>
-    </div>
-    <div class="footer-center">
-        <marquee attribute_name="attribute_value">
-            <p id="copyright" class=" footer-company-name">
-                &copy; {{ new Date().getFullYear() }} AbadiGIS Limited.
-            </p>
-        </marquee>
-    </div>
-</footer>
-</template>
+      </div>
+  
+      <div class="footer-bottom">
+        <p class="footer-company-name">
+          &copy; {{ new Date().getFullYear() }} Worinium Solutions Limited.
+        </p>
+      </div>
+    </footer>
+  </template>
 
 <script>
 export default {};
@@ -101,7 +81,7 @@ footer {
     width: 100%;
     text-align: center;
     font: bold 16px sans-serif;
-    padding: 50px 50px 60px 50px;
+    padding: 10px 20px 40px 140px;
     margin-top: 20px;
 }
 
@@ -245,8 +225,6 @@ footer {
     margin-bottom: 5px;
 }
 
-/* Here is the code for Responsive Footer */
-/* You can remove below code if you don't want Footer to be responsive */
 
 @media (max-width: 880px) {
 
