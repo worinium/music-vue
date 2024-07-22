@@ -5,10 +5,10 @@
         <img src="http://placehold.it/150x50?text=Logo" alt="Logo" />
         <h4> Music</h4>
         <p class="footer-links">
-          <a href="#">LinkedIn</a> |
+          <a href="https://www.linkedin.com/in/hearty-alapher/">LinkedIn</a> |
           <a href="https://alahearty.github.io/portfolio/">Profile</a> |
-          <a href="#">Facebook</a> |
-          <a href="#">Twitter</a>
+          <a href="https://www.facebook.com/worinium">Facebook</a> |
+          <a href="https://twitter.com/home">Twitter</a>
         </p>
       </div>
   
